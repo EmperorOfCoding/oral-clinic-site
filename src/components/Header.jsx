@@ -30,15 +30,17 @@ export default function Header() {
       document.body.style.overflow = '';
       setOpen(false);
       
-      const targetId = href.replace('#', '');
-      const elem = document.getElementById(targetId);
-      if (elem) {
-        const offsetTop = elem.getBoundingClientRect().top + window.scrollY - 80;
-        window.scrollTo({
-          top: offsetTop,
-          behavior: 'smooth'
-        });
-      }
+      setTimeout(() => {
+        const targetId = href.replace('#', '');
+        const elem = document.getElementById(targetId);
+        if (elem) {
+          const offsetTop = elem.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      }, 150);
     } else {
       document.body.style.overflow = '';
       setOpen(false);
