@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --grid-line: rgba(126, 34, 206, 0.06);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-cloud text-slate-700 antialiased;
+    font-feature-settings: 'ss01', 'cv01';
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-ink;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background-color: rgba(168, 85, 247, 0.20);
+    color: #2a1538;
+  }
+
+  /* Respeita usuarios que preferem menos movimento */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand-600;
+  }
+
+  /* Botao primario (CTA WhatsApp) */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand-600 px-7 py-3.5 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-brand-200 bg-white/70 px-7 py-3.5 text-sm font-semibold text-brand-700 backdrop-blur transition-all duration-300 hover:border-brand-300 hover:bg-white hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600;
+  }
+
+  .card-soft {
+    @apply rounded-4xl border border-white bg-white shadow-soft;
+  }
+
+  /* Textura sutil de pontos para fundos */
+  .bg-dots {
+    background-image: radial-gradient(rgba(126, 34, 206, 0.08) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+}
