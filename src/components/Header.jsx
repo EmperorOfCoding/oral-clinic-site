@@ -30,8 +30,8 @@ export default function Header() {
     >
       <div
         className={`w-full max-w-7xl transition-all duration-500 sm:rounded-full ${
-          scrolled
-            ? 'bg-white/90 backdrop-blur-xl shadow-[0_8px_30px_-12px_rgba(42,21,56,0.15)] border border-brand-100/60 py-2.5 px-6 xl:px-8'
+          scrolled || open
+            ? 'bg-white/95 backdrop-blur-xl shadow-[0_8px_30px_-12px_rgba(42,21,56,0.15)] border border-brand-100/60 py-2.5 px-6 xl:px-8'
             : 'bg-transparent border border-transparent py-4 px-6 xl:px-8'
         }`}
       >
