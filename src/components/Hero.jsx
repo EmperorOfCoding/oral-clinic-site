@@ -115,7 +115,7 @@ export default function Hero() {
             */}
             <div className="relative h-full w-full overflow-hidden rounded-5xl border-4 border-white bg-brand-100 shadow-card">
               <img
-                src="/images/foto_dona.png"
+                src="/images/foto_dona (2).png"
                 alt="Dra. Claudia, cirurgiã dentista da Oral Clinic em Salvador"
                 className="h-full w-full object-cover"
                 width="1200"
