@@ -29,7 +29,7 @@ const item = {
 };
 
 export default function Hero() {
-  const cta = whatsappLink('Olá! Gostaria de agendar uma consulta na Oral Clinic.');
+  const cta = whatsappLink('Olá! Vim pelo site da Oral Clinic e gostaria de agendar uma consulta.');
 
   return (
     <section id="inicio" className="relative overflow-hidden pt-28 pb-16 sm:pt-32 lg:pt-36 lg:pb-24">

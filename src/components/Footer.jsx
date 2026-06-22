@@ -3,7 +3,7 @@ import { MapPin, MessageCircle, Instagram } from 'lucide-react';
 import { CLINIC, NAV_LINKS, whatsappLink } from '../lib/site.js';
 
 export default function Footer() {
-  const cta = whatsappLink('Olá! Gostaria de agendar uma consulta na Oral Clinic.');
+  const cta = whatsappLink('Olá! Vim pelo site da Oral Clinic e gostaria de agendar uma consulta.');
   const year = new Date().getFullYear();
 
   return (

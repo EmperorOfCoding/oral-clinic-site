@@ -13,7 +13,7 @@ function WhatsAppGlyph({ className = 'h-7 w-7' }) {
 
 export default function WhatsAppFloatingButton() {
   const reduce = useReducedMotion();
-  const cta = whatsappLink('Olá! Gostaria de agendar uma consulta na Oral Clinic.');
+  const cta = whatsappLink('Olá! Vim pelo site da Oral Clinic e gostaria de agendar uma consulta.');
 
   return (
     <motion.a

@@ -22,7 +22,7 @@ export default function Header() {
     };
   }, [open]);
 
-  const cta = whatsappLink('Olá! Gostaria de agendar uma consulta na Oral Clinic.');
+  const cta = whatsappLink('Olá! Vim pelo site da Oral Clinic e gostaria de agendar uma consulta.');
 
   const handleNavClick = (e, href) => {
     if (href.startsWith('#')) {

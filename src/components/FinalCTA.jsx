@@ -5,7 +5,7 @@ import { fadeUp, inView } from '../lib/motion.js';
 import { whatsappLink } from '../lib/site.js';
 
 export default function FinalCTA() {
-  const cta = whatsappLink('Olá! Gostaria de agendar uma consulta na Oral Clinic.');
+  const cta = whatsappLink('Olá! Vim pelo site da Oral Clinic e gostaria de agendar uma consulta.');
 
   return (
     <section id="contato" className="relative py-20 sm:py-28">

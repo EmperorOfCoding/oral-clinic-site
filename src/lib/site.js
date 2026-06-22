@@ -21,7 +21,7 @@ export const CLINIC = {
 };
 
 // Monta um link wa.me com mensagem pre-preenchida.
-export function whatsappLink(message = 'Olá! Gostaria de agendar uma consulta na Oral Clinic.') {
+export function whatsappLink(message = 'Olá! Vim pelo site da Oral Clinic e gostaria de agendar uma consulta.') {
   return `https://wa.me/${CLINIC.whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
 
