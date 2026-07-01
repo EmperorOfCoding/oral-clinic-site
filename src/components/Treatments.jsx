@@ -9,6 +9,8 @@ import {
   AlignHorizontalDistributeCenter,
   Eye,
   Wand2,
+  Zap,
+  Scissors,
   ArrowRight,
 } from 'lucide-react';
 import SectionHeading from './SectionHeading.jsx';
@@ -55,6 +57,16 @@ const treatments = [
     icon: Wand2,
     name: 'Harmonização Orofacial',
     desc: 'Procedimentos estéticos para valorizar a harmonia facial com naturalidade.',
+  },
+  {
+    icon: Zap,
+    name: 'Clareamento Dental',
+    desc: 'Clareia os dentes com segurança e eficácia, devolvendo o brilho natural do sorriso.',
+  },
+  {
+    icon: Scissors,
+    name: 'Cirurgia Oral Menor',
+    desc: 'Procedimentos cirúrgicos simples realizados em consultório com anestesia local e recuperação rápida.',
   },
 ];
 

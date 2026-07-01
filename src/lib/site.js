@@ -4,11 +4,8 @@
 export const CLINIC = {
   name: 'Oral Clinic',
   fullName: 'Oral Clinic Odontologia e Estética',
-  phoneDisplay: '(71) 9151-2249',
-  // Numero no formato internacional para o WhatsApp (55 + DDD + numero).
-  // ATENCAO: confirme se o numero correto inclui o 9 extra de celular
-  // (ex.: 5571991512249). Atualizado conforme contato informado.
-  whatsappNumber: '557191512249',
+  phoneDisplay: '(71) 99151-2249',
+  whatsappNumber: '5571991512249',
   instagramUrl: 'https://www.instagram.com/oral_clinic_odontologia/',
   address: {
     line1: 'R. Hélio Machado, 33',
@@ -24,6 +21,10 @@ export const CLINIC = {
 export function whatsappLink(message = 'Olá! Vim pelo site da Oral Clinic e gostaria de agendar uma consulta.') {
   return `https://wa.me/${CLINIC.whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
+
+// Link direto para o campo de atendimento do Google Meu Negocio.
+// Mensagem identifica origem GMB para rastreio de conversoes.
+export const WHATSAPP_GMB_URL = `https://wa.me/${CLINIC.whatsappNumber}?text=${encodeURIComponent('Olá! Vi a Oral Clinic no Google e gostaria de agendar uma consulta de avaliação.')}`;
 
 // Links de navegacao do header (ancoras das secoes da pagina).
 export const NAV_LINKS = [
