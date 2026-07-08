@@ -19,4 +19,4 @@ export const stagger = {
 };
 
 // Configuracao padrao de viewport para whileInView.
-export const inView = { once: true, amount: 0.2, margin: '0px 0px -80px 0px' };
+export const inView = { once: true, amount: 0.05, margin: '0px 0px -40px 0px' };

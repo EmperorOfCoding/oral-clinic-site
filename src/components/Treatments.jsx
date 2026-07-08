@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   Stethoscope,
@@ -71,6 +71,8 @@ const treatments = [
 ];
 
 export default function Treatments() {
+  const [showAll, setShowAll] = useState(false);
+
   return (
     <section id="tratamentos" className="relative py-20 sm:py-28">
       {/* Fundo claro com leve realce */}
@@ -90,13 +92,15 @@ export default function Treatments() {
           viewport={inView}
           className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
         >
-          {treatments.map(({ icon: Icon, name, desc }) => {
+          {treatments.map(({ icon: Icon, name, desc }, index) => {
+            const isHiddenOnMobile = !showAll && index >= 4;
             const link = whatsappLink(`Olá! Gostaria de saber mais sobre ${name} na Oral Clinic.`);
+            
             return (
               <motion.article
                 key={name}
                 variants={fadeUp}
-                className="group relative flex flex-col rounded-4xl border border-slate-100 bg-white p-7 shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-100 hover:shadow-card"
+                className={`group relative flex-col rounded-4xl border border-slate-100 bg-white p-7 shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-100 hover:shadow-card ${isHiddenOnMobile ? 'hidden sm:flex' : 'flex'}`}
               >
                 <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-glow">
                   <Icon className="h-7 w-7" strokeWidth={1.6} />
@@ -116,6 +120,17 @@ export default function Treatments() {
             );
           })}
         </motion.div>
+
+        {!showAll && (
+          <div className="mt-10 flex justify-center sm:hidden">
+            <button
+              onClick={() => setShowAll(true)}
+              className="inline-flex h-12 items-center justify-center rounded-full bg-brand-50 px-8 text-sm font-semibold text-brand-700 transition-colors hover:bg-brand-100"
+            >
+              Ver todos os tratamentos
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
