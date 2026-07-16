@@ -2,7 +2,9 @@ import React from 'react';
 import { hydrateRoot, createRoot } from 'react-dom/client';
 import App from './src/App.jsx';
 import './src/index.css';
+import { inject } from '@vercel/analytics';
 
+inject();
 const container = document.getElementById('app');
 
 // Em producao o HTML ja vem pre-renderizado (SSG) -> hidrata.
