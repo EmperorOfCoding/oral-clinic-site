@@ -1,7 +1,7 @@
 {
   "name": "oral-clinic-site",
   "version": "1.0.0",
-  "description": "Site institucional da Oral Clinic Odontologia e Estética, clínica odontológica no Itaigara, Salvador - BA. Landing page de conversão focada em agendamentos via WhatsApp.",
+  "description": "Site institucional da Oral Clinic Odontologia e Estética, clínica odontológica na Boca do Rio, Salvador - BA. Landing page de conversão focada em agendamentos via WhatsApp.",
   "type": "module",
   "scripts": {
     "dev": "vite",
