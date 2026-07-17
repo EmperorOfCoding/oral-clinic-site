@@ -103,6 +103,18 @@
 
     gtag('config', 'AW-18158108017');
   </script>
+
+  <!-- Google Ads: Disparo de conversão para cliques no WhatsApp -->
+  <script>
+    document.addEventListener('click', function(e) {
+      var target = e.target.closest('a');
+      if (target && target.href && target.href.includes('wa.me')) {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18158108017/MRb1CIqJo9IcEPH6utJD'
+        });
+      }
+    });
+  </script>
 </head>
 
 <body>
