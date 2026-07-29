@@ -49,9 +49,13 @@ export default function Hero() {
             Dentista em Salvador, na Boca do Rio
           </motion.span>
 
-          <motion.h1
+          <h1 className="sr-only">
+            Dentista na Boca do Rio, Salvador | Oral Clinic Odontologia e Estética
+          </h1>
+          <motion.h2
             variants={item}
             className="mt-5 font-display text-[2.6rem] font-medium leading-[1.05] text-ink sm:text-6xl lg:text-[4rem]"
+            aria-hidden="true"
           >
             Transforme seu sorriso com{' '}
             <span className="relative whitespace-nowrap text-brand-600">
@@ -61,7 +65,7 @@ export default function Hero() {
               </svg>
             </span>
             , estética e segurança
-          </motion.h1>
+          </motion.h2>
 
           <motion.p variants={item} className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600">
             Na Oral Clinic Odontologia e Estética, você encontra tratamentos

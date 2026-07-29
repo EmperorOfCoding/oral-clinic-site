@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.oral-clinic-salvador.com.br/sitemap.xml
