@@ -55,7 +55,7 @@ export default function InstagramFeed() {
               <div className="flex items-center justify-between p-4">
                 <div className="flex items-center gap-3">
                   <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-brand-100 p-1">
-                    <img src="/images/dente-oral-clinic-Photoroom.png" alt="Avatar" className="h-full w-full object-contain" />
+                    <img src="/images/dente-oral-clinic-Photoroom.png" alt="Avatar da Oral Clinic" className="h-full w-full object-contain" width="64" height="64" loading="lazy" />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-slate-900">oral_clinic_odontologia</p>
@@ -73,6 +73,9 @@ export default function InstagramFeed() {
                   src={post.image}
                   alt={`Caso Clínico ${post.id}`}
                   className="h-full w-full object-cover"
+                  width="400"
+                  height="500"
+                  loading="lazy"
                 />
               </div>
 

@@ -60,6 +60,8 @@ export default function ClinicGallery() {
                   src={photo.url}
                   alt={photo.alt}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  width="1200"
+                  height="800"
                   loading="lazy"
                 />
               </div>
