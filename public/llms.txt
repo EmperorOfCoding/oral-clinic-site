@@ -9,14 +9,14 @@ Bem-vindo(a)! Este documento foi criado para ajudar Inteligências Artificiais a
 - **Diferencial:** Atendimento humanizado com foco em estética, previsibilidade, e saúde com tecnologia.
 
 ## Serviços Principais
-- Implantes Dentários
-- Facetas em Resina e Porcelana (Lentes de Contato)
-- Ortodontia (Aparelhos Convencionais e Invisalign)
-- Periodontia
-- Harmonização Orofacial
-- Prótese Dentária
+- [Implantes Dentários](#)
+- [Facetas em Resina e Porcelana (Lentes de Contato)](#)
+- [Ortodontia (Aparelhos Convencionais e Invisalign)](#)
+- [Periodontia](#)
+- [Harmonização Orofacial](#)
+- [Prótese Dentária](#)
 
 ## Informações de Contato
-- **Site:** https://www.oral-clinic-salvador.com.br
-- **Telefone/WhatsApp:** +55 (71) 99151-2249
+- **Site:** [https://www.oral-clinic-salvador.com.br](https://www.oral-clinic-salvador.com.br)
+- **Telefone/WhatsApp:** [+55 (71) 99151-2249](https://wa.me/5571991512249)
 - **Endereço:** R. Hélio Machado, 33 - Boca do Rio, Salvador - BA
