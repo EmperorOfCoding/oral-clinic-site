@@ -62,7 +62,7 @@ export default function InstagramFeed() {
                     <p className="text-xs text-slate-500">Salvador, BA</p>
                   </div>
                 </div>
-                <button className="text-slate-900 hover:text-slate-600">
+                <button className="text-slate-900 hover:text-slate-600" aria-label="Mais opções">
                   <MoreHorizontal className="h-5 w-5" />
                 </button>
               </div>
@@ -83,17 +83,17 @@ export default function InstagramFeed() {
               <div className="p-4">
                 <div className="mb-3 flex items-center justify-between">
                   <div className="flex items-center gap-4">
-                    <button className="text-slate-900 hover:text-slate-600">
+                    <button className="text-slate-900 hover:text-slate-600" aria-label="Curtir">
                       <Heart className="h-6 w-6" />
                     </button>
-                    <button className="text-slate-900 hover:text-slate-600">
+                    <button className="text-slate-900 hover:text-slate-600" aria-label="Comentar">
                       <MessageCircle className="h-6 w-6" />
                     </button>
-                    <button className="text-slate-900 hover:text-slate-600">
+                    <button className="text-slate-900 hover:text-slate-600" aria-label="Compartilhar">
                       <Send className="h-6 w-6" />
                     </button>
                   </div>
-                  <button className="text-slate-900 hover:text-slate-600">
+                  <button className="text-slate-900 hover:text-slate-600" aria-label="Salvar">
                     <Bookmark className="h-6 w-6" />
                   </button>
                 </div>
