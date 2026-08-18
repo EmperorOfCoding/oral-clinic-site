@@ -1,9 +1,8 @@
-import React from 'react';
 import { MotionConfig } from 'framer-motion';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
 import PainPoints from './components/PainPoints.jsx';
-import InstagramFeed from './components/InstagramFeed.jsx';
+import CasosReais from './components/CasosReais.jsx';
 import Treatments from './components/Treatments.jsx';
 import Differentials from './components/Differentials.jsx';
 import ClinicGallery from './components/ClinicGallery.jsx';
@@ -24,8 +23,9 @@ export default function App() {
         <Header />
         <main>
           <Hero />
-          <InstagramFeed />
+          {/* Autoridade e acolhimento antes da prova social. */}
           <PainPoints />
+          <CasosReais />
           <Treatments />
           <Differentials />
           <ClinicGallery />

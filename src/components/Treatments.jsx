@@ -1,88 +1,16 @@
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import {
-  Stethoscope,
-  HeartPulse,
-  Smile,
-  Layers,
-  Sparkles,
-  AlignHorizontalDistributeCenter,
-  Eye,
-  Wand2,
-  Zap,
-  Scissors,
-  ArrowRight,
-} from 'lucide-react';
 import SectionHeading from './SectionHeading.jsx';
 import { stagger, fadeUp, inView } from '../lib/motion.js';
-import { whatsappLink } from '../lib/site.js';
-
-const treatments = [
-  {
-    icon: Stethoscope,
-    name: 'Clínica Geral',
-    desc: 'Prevenção, diagnóstico e cuidado completo para manter sua saúde bucal em dia.',
-  },
-  {
-    icon: HeartPulse,
-    name: 'Periodontia',
-    desc: 'Tratamento da gengiva e dos tecidos de suporte dos dentes, prevenindo sangramentos, inflamações e perdas dentárias.',
-  },
-  {
-    icon: Smile,
-    name: 'Implantes Dentários',
-    desc: 'Recupere dentes perdidos com estabilidade, segurança e aparência natural.',
-  },
-  {
-    icon: Layers,
-    name: 'Prótese Dentária',
-    desc: 'Soluções para restaurar função mastigatória, estética e conforto.',
-  },
-  {
-    icon: Sparkles,
-    name: 'Facetas Dentárias',
-    desc: 'Melhore formato, cor e harmonia do sorriso com planejamento estético personalizado.',
-  },
-  {
-    icon: AlignHorizontalDistributeCenter,
-    name: 'Ortodontia',
-    desc: 'Correção do alinhamento dos dentes e da mordida para melhorar estética e função.',
-  },
-  {
-    icon: Eye,
-    name: 'Invisalign / Alinhadores',
-    desc: 'Alinhe seus dentes de forma discreta, confortável e previsível.',
-  },
-  {
-    icon: Wand2,
-    name: 'Harmonização Orofacial',
-    desc: 'Procedimentos estéticos para valorizar a harmonia facial com naturalidade.',
-  },
-  {
-    icon: Zap,
-    name: 'Clareamento Dental',
-    desc: 'Clareia os dentes com segurança e eficácia, devolvendo o brilho natural do sorriso.',
-  },
-  {
-    icon: Scissors,
-    name: 'Cirurgia Oral Menor',
-    desc: 'Procedimentos cirúrgicos simples realizados em consultório com anestesia local e recuperação rápida.',
-  },
-];
+import { TREATMENT_GROUPS, whatsappLink } from '../lib/site.js';
 
 export default function Treatments() {
-  const [showAll, setShowAll] = useState(false);
-
   return (
-    <section id="tratamentos" className="relative py-20 sm:py-28">
-      {/* Fundo claro com leve realce */}
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-cloud via-white to-cloud" />
-
+    <section id="tratamentos" className="border-y border-ink/[0.06] bg-lavanda-50 py-20 sm:py-28">
       <div className="container-page">
         <SectionHeading
-          eyebrow="Odontologia estética em Salvador"
-          title="Tratamentos odontológicos e estéticos em um só lugar"
-          description="Da prevenção à transformação do sorriso, reunimos especialidades completas para cuidar da sua saúde bucal e da sua autoestima com planejamento individualizado."
+          eyebrow="Tratamentos"
+          title="Organizados pelo que você precisa resolver"
+          lead="Reunimos as especialidades em quatro frentes de cuidado. A indicação exata depende da avaliação clínica presencial."
         />
 
         <motion.div
@@ -90,47 +18,35 @@ export default function Treatments() {
           initial="hidden"
           whileInView="show"
           viewport={inView}
-          className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
+          className="mt-14 grid gap-x-12 gap-y-14 sm:grid-cols-2"
         >
-          {treatments.map(({ icon: Icon, name, desc }, index) => {
-            const isHiddenOnMobile = !showAll && index >= 4;
-            const link = whatsappLink(`Olá! Gostaria de saber mais sobre ${name} na Oral Clinic.`);
-            
-            return (
-              <motion.article
-                key={name}
-                variants={fadeUp}
-                className={`group relative flex-col rounded-4xl border border-slate-100 bg-white p-7 shadow-soft transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-100 hover:shadow-card ${isHiddenOnMobile ? 'hidden sm:flex' : 'flex'}`}
-              >
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-glow">
-                  <Icon className="h-7 w-7" strokeWidth={1.6} />
-                </span>
-                <h3 className="mt-6 font-display text-xl font-semibold text-ink">{name}</h3>
-                <p className="mt-3 flex-1 text-[0.95rem] leading-relaxed text-slate-600">{desc}</p>
-                <a
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 transition-colors hover:text-brand-700"
-                >
-                  Quero saber mais
-                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={2} />
-                </a>
-              </motion.article>
-            );
-          })}
-        </motion.div>
+          {TREATMENT_GROUPS.map((group) => (
+            <motion.article key={group.id} variants={fadeUp}>
+              <h3 className="font-display text-[1.35rem] font-normal text-ink">{group.title}</h3>
+              <p className="mt-2.5 text-[0.94rem] leading-relaxed text-graphite/85">{group.summary}</p>
 
-        {!showAll && (
-          <div className="mt-10 flex justify-center sm:hidden">
-            <button
-              onClick={() => setShowAll(true)}
-              className="inline-flex h-12 items-center justify-center rounded-full bg-brand-50 px-8 text-sm font-semibold text-brand-700 transition-colors hover:bg-brand-100"
-            >
-              Ver todos os tratamentos
-            </button>
-          </div>
-        )}
+              <ul className="mt-6">
+                {group.items.map((item) => (
+                  <li key={item.name} className="border-t border-ink/[0.08] py-4">
+                    <p className="text-[0.95rem] font-semibold text-ink">{item.name}</p>
+                    <p className="mt-1 text-[0.88rem] leading-relaxed text-graphite/85">{item.desc}</p>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={whatsappLink(
+                  `Olá! Gostaria de saber mais sobre ${group.title.toLowerCase()} na Oral Clinic.`
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex text-[0.83rem] font-semibold text-brand-700 underline decoration-champagne decoration-2 underline-offset-[6px] transition-colors hover:text-brand-800"
+              >
+                Agendar avaliação
+              </a>
+            </motion.article>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

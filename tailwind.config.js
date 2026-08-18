@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Roxo / violeta: cor de marca (extraida da logo da Oral Clinic)
+        // Roxo / violeta: cor de marca (extraida da logo da Oral Clinic).
+        // Uso restrito a CTAs, estados ativos e detalhes. Nao e a base visual.
         brand: {
           50: '#faf5ff',
           100: '#f3e8ff',
@@ -18,33 +19,34 @@ export default {
           900: '#581c87',
           950: '#3b0764',
         },
-        // Lilas / orquidea suave de apoio (brilhos e realces)
-        aqua: {
-          50: '#fdf6ff',
-          100: '#f8eaff',
-          200: '#efd4ff',
-          300: '#e0b3fb',
-          400: '#cd8ef5',
-          500: '#b566ec',
+        // Lavanda palida: superficies de descanso (fundos de secao alternados).
+        lavanda: {
+          50: '#fbf9fd',
+          100: '#f5f1f8',
+          200: '#ebe4f0',
+          300: '#ddd2e5',
         },
-        // Champagne / dourado: acento premium (uso pontual)
+        // Champagne / dourado: acento premium, uso pontual (fios, detalhes).
         champagne: {
           DEFAULT: '#c2a36b',
           light: '#e3d2ac',
           dark: '#a8884f',
         },
-        // Tom de tinta para títulos (plum escuro)
+        // Plum escuro: cor de titulo e texto forte.
         ink: '#2a1538',
-        cloud: '#faf8fc',
+        // Grafite suave: texto corrido.
+        graphite: '#4a4550',
+        // Off-white clinico: fundo principal.
+        cloud: '#fbfafc',
       },
       fontFamily: {
         display: ['Fraunces', 'Georgia', 'serif'],
         sans: ['Manrope', 'system-ui', '-apple-system', 'sans-serif'],
       },
       boxShadow: {
-        soft: '0 18px 50px -24px rgba(42, 21, 56, 0.22)',
-        card: '0 24px 60px -30px rgba(42, 21, 56, 0.30)',
-        glow: '0 0 0 1px rgba(168, 85, 247, 0.10), 0 20px 60px -28px rgba(147, 51, 234, 0.40)',
+        // Sombras contidas: profundidade sutil, sem peso de "card flutuante".
+        soft: '0 1px 2px rgba(42, 21, 56, 0.04), 0 8px 24px -16px rgba(42, 21, 56, 0.16)',
+        card: '0 2px 4px rgba(42, 21, 56, 0.04), 0 18px 40px -24px rgba(42, 21, 56, 0.22)',
       },
       borderRadius: {
         '4xl': '2rem',
@@ -53,20 +55,8 @@ export default {
       spacing: {
         4.5: '1.125rem',
       },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
-        },
-        pulseRing: {
-          '0%': { transform: 'scale(0.92)', opacity: '0.7' },
-          '70%': { transform: 'scale(1.6)', opacity: '0' },
-          '100%': { transform: 'scale(1.6)', opacity: '0' },
-        },
-      },
-      animation: {
-        float: 'float 6s ease-in-out infinite',
-        'pulse-ring': 'pulseRing 2.6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      maxWidth: {
+        prose: '68ch',
       },
     },
   },
