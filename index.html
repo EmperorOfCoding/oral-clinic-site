@@ -141,23 +141,22 @@
     gtag('config', 'AW-18527390238');
   </script>
 
-  <!-- Event snippet for WhatsApp - Oral Clinic conversion page -->
+  <!-- Event snippet for Clique WhatsApp conversion page -->
   <script>
     function gtag_report_conversion(url) {
       var callback = function () {
         if (typeof(url) != 'undefined') {
-          // Comentado para permitir que o React abra o WhatsApp em nova aba (target="_blank") naturalmente
-          // window.location = url;
+          window.location = url;
         }
       };
       gtag('event', 'conversion', {
-          'send_to': 'AW-18158108017/MRb1CIqJo9IcEPH6utJD',
+          'send_to': 'AW-18527390238/gOBxCIqjh6cdEJ6UxoJF',
           'event_callback': callback
       });
       return false;
     }
 
-    // Gatilho que aciona a função oficial do Google ao clicar em qualquer link do WhatsApp
+    // Aciona a conversão oficial do Google ao clicar em qualquer link de WhatsApp do site
     document.addEventListener('click', function(e) {
       var target = e.target.closest('a');
       if (target && target.href && target.href.includes('wa.me')) {
