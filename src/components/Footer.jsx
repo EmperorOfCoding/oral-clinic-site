@@ -1,57 +1,44 @@
-import React from 'react';
-import { MapPin, MessageCircle, Instagram } from 'lucide-react';
-import { CLINIC, NAV_LINKS, whatsappLink } from '../lib/site.js';
+import { Instagram } from 'lucide-react';
+import Logo from './Logo.jsx';
+import { CLINIC, NAV_LINKS, OPENING_HOURS, CTA_AGENDAR } from '../lib/site.js';
 
 export default function Footer() {
-  const cta = whatsappLink('Olá! Vim pelo site da Oral Clinic e gostaria de agendar uma consulta.');
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t border-brand-100 bg-white">
+    <footer className="border-t border-ink/[0.08] bg-white">
       <div className="container-page py-16">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
-          {/* Marca */}
+        <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr]">
           <div>
-            <div className="flex items-center gap-3">
-              <img
-                src="/images/logo-oral-clinic-melhorada.png"
-                alt="Oral Clinic Odontologia e Estética"
-                className="h-12 w-12 rounded-2xl object-cover shadow-soft"
-                width="96"
-                height="96"
-              />
-              <span className="flex flex-col leading-none">
-                <span className="text-xl font-extrabold tracking-tight">
-                  <span className="text-brand-700">ORAL</span>
-                  <span className="text-slate-600">CLINIC</span>
-                </span>
-                <span className="mt-0.5 text-[10px] font-semibold uppercase tracking-[0.2em] text-brand-500">
-                  Odontologia e Estética
-                </span>
-              </span>
-            </div>
-            <p className="mt-5 max-w-sm text-sm leading-relaxed text-slate-600">
-              Clínica odontológica e estética em Salvador, na Boca do Rio. Cuidamos
-              do seu sorriso com atenção, planejamento e responsabilidade.
+            <Logo />
+
+            <p className="mt-6 max-w-sm text-[0.9rem] leading-relaxed text-graphite">
+              Clínica odontológica e estética na Boca do Rio, em Salvador. Cuidamos
+              do seu sorriso com avaliação, planejamento e acompanhamento.
             </p>
+
             <a
               href={CLINIC.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex h-11 w-11 items-center justify-center rounded-full border border-brand-100 text-brand-600 transition hover:border-brand-300 hover:bg-brand-50"
-              aria-label="Instagram da Oral Clinic"
+              className="mt-6 inline-flex items-center gap-2 text-[0.85rem] font-medium text-graphite transition-colors hover:text-brand-700"
             >
-              <Instagram className="h-5 w-5" strokeWidth={1.8} />
+              <Instagram className="h-4 w-4" strokeWidth={1.6} />
+              @oral_clinic_odontologia
             </a>
           </div>
 
-          {/* Links rapidos */}
           <nav aria-label="Links rápidos">
-            <h3 className="font-display text-sm font-semibold uppercase tracking-wide text-ink">Navegação</h3>
-            <ul className="mt-5 space-y-3">
+            <h3 className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-graphite/65">
+              Navegação
+            </h3>
+            <ul className="mt-5 space-y-2.5">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="text-sm text-slate-600 transition-colors hover:text-brand-700">
+                  <a
+                    href={link.href}
+                    className="text-[0.9rem] text-graphite transition-colors hover:text-brand-700"
+                  >
                     {link.label}
                   </a>
                 </li>
@@ -59,40 +46,63 @@ export default function Footer() {
             </ul>
           </nav>
 
-          {/* Contato */}
           <div>
-            <h3 className="font-display text-sm font-semibold uppercase tracking-wide text-ink">Contato</h3>
-            <ul className="mt-5 space-y-4 text-sm text-slate-600">
-              <li className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-4.5 w-4.5 shrink-0 text-brand-500" strokeWidth={1.8} />
-                <span>
-                  {CLINIC.address.line1}
-                  <br />
-                  {CLINIC.address.line2}
-                  <br />
-                  {CLINIC.address.line3}
-                </span>
-              </li>
-              <li>
-                <a href={cta} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 transition-colors hover:text-brand-700">
-                  <MessageCircle className="h-4.5 w-4.5 shrink-0 text-brand-500" strokeWidth={1.8} />
+            <h3 className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-graphite/65">
+              Contato
+            </h3>
+            <address className="mt-5 space-y-4 text-[0.9rem] not-italic leading-relaxed text-graphite">
+              <p>
+                {CLINIC.address.line1}
+                <br />
+                {CLINIC.address.line2}
+                <br />
+                {CLINIC.address.line3}
+              </p>
+              <p>
+                <a
+                  href={CTA_AGENDAR}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-brand-700"
+                >
                   {CLINIC.phoneDisplay}
                 </a>
-              </li>
-            </ul>
+              </p>
+            </address>
+
+            <div className="mt-6 space-y-1.5 text-[0.82rem] text-graphite/80">
+              {OPENING_HOURS.filter((slot) => !slot.closed).map((slot) => (
+                <p key={slot.days}>
+                  {slot.days}: {slot.hours}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Aviso e creditos */}
-        <div className="mt-12 border-t border-slate-100 pt-8">
-          <p className="text-xs leading-relaxed text-slate-400">
-            As informações deste site não substituem uma avaliação profissional individualizada.
+        {/* Identificacao profissional e aviso legal. */}
+        <div className="mt-14 border-t border-ink/[0.08] pt-8">
+          <p className="text-[0.82rem] font-medium text-graphite">
+            Responsável técnica: {CLINIC.responsavelTecnica}, {CLINIC.cro}
           </p>
-          <div className="mt-4 flex flex-col gap-2 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
-            <p>© {year} {CLINIC.fullName}. Todos os direitos reservados.</p>
+          <p className="mt-3 max-w-2xl text-[0.78rem] leading-relaxed text-graphite/70">
+            As informações deste site têm caráter informativo e não substituem uma
+            avaliação profissional individualizada. Os resultados de tratamento
+            variam conforme a condição clínica de cada paciente.
+          </p>
+
+          <div className="mt-6 flex flex-col gap-2 text-[0.78rem] text-graphite/70 sm:flex-row sm:items-center sm:justify-between">
+            <p>
+              © {year} {CLINIC.fullName}. Todos os direitos reservados.
+            </p>
             <p>
               Desenvolvido por{' '}
-              <a href="https://vexaris.com.br" target="_blank" rel="noopener noreferrer" className="font-semibold text-brand-600 hover:text-brand-700">
+              <a
+                href="https://vexaris.com.br"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-brand-700 transition-colors hover:text-brand-800"
+              >
                 Vexaris
               </a>
             </p>

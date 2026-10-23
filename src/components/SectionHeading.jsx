@@ -1,28 +1,42 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeUp, inView } from '../lib/motion.js';
 
-// Cabecalho padronizado de secao: eyebrow + titulo (H2) + descricao opcional.
-export default function SectionHeading({ eyebrow, title, description, align = 'center', className = '' }) {
+// Cabecalho editorial de secao: rotulo + titulo (H2) + linha de apoio opcional.
+// Alinhamento a esquerda por padrao para reforcar a leitura editorial.
+export default function SectionHeading({
+  eyebrow,
+  title,
+  lead,
+  align = 'left',
+  tone = 'light',
+  className = '',
+}) {
   const isCenter = align === 'center';
+  const isDark = tone === 'dark';
+
   return (
     <motion.div
       variants={fadeUp}
       initial="hidden"
       whileInView="show"
       viewport={inView}
-      className={`${isCenter ? 'mx-auto max-w-3xl text-center' : 'max-w-2xl'} ${className}`}
+      className={`${isCenter ? 'mx-auto max-w-2xl text-center' : 'max-w-2xl'} ${className}`}
     >
       {eyebrow && (
-        <span className={`eyebrow ${isCenter ? 'justify-center' : ''}`}>
-          <span className="h-px w-6 bg-brand-400" />
+        <span
+          className={`eyebrow ${isCenter ? 'justify-center' : ''} ${
+            isDark ? 'text-white/70 before:bg-champagne-light' : ''
+          }`}
+        >
           {eyebrow}
         </span>
       )}
-      <h2 className="mt-4 font-display text-3xl font-medium leading-tight text-ink sm:text-4xl lg:text-[2.7rem]">
-        {title}
-      </h2>
-      {description && <p className="mt-4 text-lg leading-relaxed text-slate-600">{description}</p>}
+      <h2 className={`mt-5 section-title ${isDark ? 'text-white' : ''}`}>{title}</h2>
+      {lead && (
+        <p className={`mt-5 section-lead ${isCenter ? 'mx-auto' : ''} ${isDark ? 'text-white/75' : ''}`}>
+          {lead}
+        </p>
+      )}
     </motion.div>
   );
 }
