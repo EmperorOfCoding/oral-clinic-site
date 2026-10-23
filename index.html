@@ -143,7 +143,14 @@
 
   <!-- Event snippet for Clique WhatsApp conversion page -->
   <script>
+    var lastConversionTime = 0;
     function gtag_report_conversion(url) {
+      var now = Date.now();
+      if (now - lastConversionTime < 1500) {
+        return false;
+      }
+      lastConversionTime = now;
+
       var callback = function () {
         if (typeof(url) != 'undefined') {
           window.location = url;
