@@ -9,7 +9,7 @@ import {
   MoveHorizontal,
   Wind,
 } from 'lucide-react';
-import { CLINIC, whatsappLink } from '../lib/site.js';
+import { CLINIC, localFaq, whatsappLink } from '../lib/site.js';
 import {
   CtaFinal,
   FaqColumns,
@@ -96,6 +96,7 @@ export const FAQ = [
     question: 'Quanto custa?',
     answer: 'O valor depende do caso e é informado após a avaliação presencial.',
   },
+  localFaq('periodontia'),
 ];
 
 export default function Periodontia() {
@@ -104,7 +105,7 @@ export default function Periodontia() {
       <main>
         <section className="bg-lavanda-100">
           <LpHeader tone="light" ctaHref={CTA} />
-          <div className="mx-auto grid max-w-[1440px] items-center gap-10 lg:grid-cols-[560px_1fr] lg:gap-20 lg:pr-12 xl:pr-24">
+          <div className="mx-auto grid grid-cols-1 max-w-[1440px] items-center gap-10 lg:grid-cols-[560px_1fr] lg:gap-20 lg:pr-12 xl:pr-24">
             <img
               src="/images/lp/pe-modelo.webp"
               alt="Modelo anatômico de arcadas dentárias com gengiva sobre bancada clara"
@@ -119,11 +120,12 @@ export default function Periodontia() {
               <Eyebrow>Periodontia | Boca do Rio, Salvador</Eyebrow>
               <Headline
                 lines={['Gengiva saudável,', 'dentes bem', 'cuidados.']}
+                place="Periodontia na Boca do Rio, em Salvador"
                 className="text-[2.6rem] sm:text-[4rem] lg:text-[4.75rem] lg:leading-[1.04]"
               />
               <p className="max-w-[520px] text-lg leading-relaxed text-graphite">
-                Avaliação e tratamento da gengiva e dos tecidos que sustentam os dentes, com orientação
-                para o cuidado em casa.
+                Na Oral Clinic, na Boca do Rio, em Salvador, avaliamos e tratamos a gengiva e os tecidos que
+                sustentam os dentes, com orientação para o cuidado em casa.
               </p>
               <WhatsAppButton href={CTA}>Agendar avaliação de periodontia</WhatsAppButton>
               <div className="flex w-full max-w-[520px] items-center justify-between gap-4 border-t border-ink/[0.09] pt-4">
@@ -268,7 +270,7 @@ export default function Periodontia() {
 
         <FaqColumns items={FAQ} />
         <CtaFinal
-          title="Agende sua avaliação de periodontia."
+          title="Agende sua avaliação de periodontia na Boca do Rio."
           lead="Envie uma mensagem e escolha o horário para avaliar a sua gengiva."
           buttonLabel="Agendar avaliação de periodontia"
           href={CTA}

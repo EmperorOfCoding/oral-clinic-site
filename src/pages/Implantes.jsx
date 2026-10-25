@@ -1,4 +1,4 @@
-import { whatsappLink } from '../lib/site.js';
+import { localFaq, whatsappLink } from '../lib/site.js';
 import {
   CtaFinal,
   FactsBar,
@@ -74,6 +74,7 @@ export const FAQ = [
     question: 'Quanto custa?',
     answer: 'O valor depende do caso e é informado após a avaliação presencial.',
   },
+  localFaq('implantes dentários'),
 ];
 
 export default function Implantes() {
@@ -102,10 +103,11 @@ export default function Implantes() {
                 <Eyebrow>Implantes dentários | Boca do Rio, Salvador</Eyebrow>
                 <Headline
                   lines={['Reponha o dente', 'que faltou,', 'com firmeza.']}
+                  place="Implantes dentários na Boca do Rio, em Salvador"
                   className="text-[2.75rem] sm:text-[4.25rem] lg:text-[4.875rem] lg:leading-[1.03]"
                 />
                 <p className="max-w-[500px] text-lg leading-relaxed text-graphite">
-                  Implante planejado caso a caso, com avaliação e exames antes de qualquer procedimento.
+                  Na Oral Clinic, na Boca do Rio, em Salvador, o implante é planejado caso a caso, com avaliação e exames antes de qualquer procedimento.
                 </p>
                 <WhatsAppButton href={CTA}>Agendar avaliação de implante</WhatsAppButton>
               </div>
@@ -195,7 +197,7 @@ export default function Implantes() {
 
         <FaqColumns items={FAQ} />
         <CtaFinal
-          title="Agende sua avaliação de implantes."
+          title="Agende sua avaliação de implantes na Boca do Rio."
           lead="Envie uma mensagem e escolha o horário da sua avaliação com exames."
           buttonLabel="Agendar avaliação de implante"
           href={CTA}

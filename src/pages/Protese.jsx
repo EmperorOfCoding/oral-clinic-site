@@ -1,5 +1,5 @@
 import { ArrowRight, CalendarCheck, HeartHandshake, MessageCircle } from 'lucide-react';
-import { CLINIC, whatsappLink } from '../lib/site.js';
+import { CLINIC, localFaq, whatsappLink } from '../lib/site.js';
 import {
   CtaFinal,
   FactsBar,
@@ -96,6 +96,7 @@ export const FAQ = [
     question: 'Quanto custa?',
     answer: 'O valor depende do caso e é informado após a avaliação presencial.',
   },
+  localFaq('prótese dentária'),
 ];
 
 export default function Protese() {
@@ -109,13 +110,14 @@ export default function Protese() {
               <Eyebrow tone="light">Prótese dentária | Boca do Rio, Salvador</Eyebrow>
               <Headline
                 lines={['Mastigar,', 'falar e sorrir', 'sem receio.']}
+                place="Prótese dentária na Boca do Rio, em Salvador"
                 color="text-white"
                 accent="text-champagne"
                 className="text-[2.9rem] sm:text-[4.5rem] lg:text-[5.5rem] lg:leading-[1.02]"
               />
               <p className="max-w-[500px] text-lg leading-relaxed text-mist">
-                Prótese fixa, removível ou sobre implante, planejada para o seu caso após uma
-                avaliação presencial na Oral Clinic.
+                Na Oral Clinic, na Boca do Rio, em Salvador, a prótese fixa, removível ou sobre implante
+                é planejada para o seu caso após uma avaliação presencial.
               </p>
               <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
                 <WhatsAppButton href={CTA}>Agendar avaliação de prótese</WhatsAppButton>
@@ -294,7 +296,7 @@ export default function Protese() {
 
         <FaqColumns items={FAQ} />
         <CtaFinal
-          title="Agende sua avaliação de prótese dentária."
+          title="Agende sua avaliação de prótese dentária na Boca do Rio."
           lead="Conte a sua situação pelo WhatsApp e escolha o horário da avaliação."
           buttonLabel="Agendar avaliação de prótese"
           href={CTA}

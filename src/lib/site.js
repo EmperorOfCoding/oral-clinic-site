@@ -103,3 +103,11 @@ export const TREATMENT_GROUPS = [
     ],
   },
 ];
+
+// Pergunta de localizacao do FAQ de cada landing page (alimenta tambem o FAQPage).
+export function localFaq(servico) {
+  return {
+    question: `Onde fica a clínica de ${servico}?`,
+    answer: `A Oral Clinic fica na ${CLINIC.address.line1}, ${CLINIC.address.line2.replace(' - BA', '')}. O atendimento é de segunda a sexta, com horário marcado pelo WhatsApp.`,
+  };
+}

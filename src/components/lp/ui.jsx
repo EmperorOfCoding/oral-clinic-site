@@ -41,7 +41,7 @@ export function SectionTitle({ eyebrow, children, light = false, className = '' 
 }
 
 // H1 em linhas fixas, com a ultima em destaque italico.
-export function Headline({ lines, accent = 'text-brand-700', color = 'text-ink', className = '' }) {
+export function Headline({ lines, place, accent = 'text-brand-700', color = 'text-ink', className = '' }) {
   return (
     <h1
       className={`font-display font-normal leading-[1.03] tracking-[-0.03em] ${color} ${className}`}
@@ -54,6 +54,11 @@ export function Headline({ lines, accent = 'text-brand-700', color = 'text-ink',
           </span>
         );
       })}
+      {place && (
+        <span className={`mt-4 block text-[0.3em] font-normal not-italic leading-snug tracking-normal ${accent}`}>
+          {place}
+        </span>
+      )}
     </h1>
   );
 }

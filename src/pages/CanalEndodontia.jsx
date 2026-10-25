@@ -155,10 +155,13 @@ export default function CanalEndodontia() {
               <h1 className="font-display text-[2.9rem] font-medium leading-[1.05] tracking-[-0.025em] text-white sm:text-[4.25rem]">
                 <span className="block">Dor de dente</span>
                 <span className="block italic text-champagne">não deve esperar.</span>
+                <span className="mt-3 block text-[0.34em] font-normal leading-snug tracking-normal text-[#efe6f7]">
+                  Tratamento de canal na Boca do Rio, em Salvador
+                </span>
               </h1>
               <p className="text-[1.19rem] leading-relaxed text-[#e4d9ef]">
-                Avalie com a Dra. Marcela se o tratamento de canal é o caminho para tratar e preservar
-                o seu dente. Atendimento com anestesia local e plano explicado antes de começar.
+                Na Oral Clinic, na Boca do Rio, em Salvador, a Dra. Marcela avalia se o tratamento de canal
+                é o caminho para tratar e preservar o seu dente. Atendimento com anestesia local e plano explicado antes de começar.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                 <WhatsAppButton href={CTA} variant="green" size="lg" className="font-extrabold shadow-[0_8px_24px_#1FA85540]">
@@ -357,7 +360,7 @@ export default function CanalEndodontia() {
           <div className="relative mx-auto grid max-w-[1248px] items-center gap-12 lg:grid-cols-[1fr_444px] lg:gap-[100px]">
             <div className="flex flex-col items-start gap-[22px]">
               <h2 className="font-display text-[2.2rem] font-medium leading-[1.1] tracking-[-0.02em] text-white sm:text-[3.125rem]">
-                Dente doendo? Agende a sua avaliação hoje.
+                Dente doendo na Boca do Rio? Agende a sua avaliação hoje.
               </h2>
               <p className="max-w-[560px] text-lg leading-[1.5] text-[#e4d9ef]">
                 Fale com a clínica pelo WhatsApp, conte o que está sentindo e escolha o melhor horário.

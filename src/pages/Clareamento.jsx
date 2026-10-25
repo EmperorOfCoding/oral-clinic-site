@@ -1,5 +1,5 @@
 import { CalendarCheck, Coffee, Sparkles, ThermometerSnowflake } from 'lucide-react';
-import { whatsappLink } from '../lib/site.js';
+import { localFaq, whatsappLink } from '../lib/site.js';
 import {
   CtaFinal,
   FactsBar,
@@ -84,6 +84,7 @@ export const FAQ = [
     question: 'Quanto custa?',
     answer: 'O valor depende do caso e é informado após a avaliação presencial.',
   },
+  localFaq('clareamento dental'),
 ];
 
 function Swatches({ className, swatchClassName }) {
@@ -111,11 +112,12 @@ export default function Clareamento() {
               <Eyebrow>Clareamento dental | Boca do Rio, Salvador</Eyebrow>
               <Headline
                 lines={['Um sorriso', 'mais claro,', 'com cuidado.']}
+                place="Clareamento dental na Boca do Rio, em Salvador"
                 className="text-[3rem] sm:text-[4.75rem] lg:text-[5.75rem] lg:leading-[1.02]"
               />
               <p className="max-w-[500px] text-lg leading-relaxed text-graphite">
-                Clareamento indicado após avaliação, com acompanhamento da sensibilidade e respeito
-                ao tom natural dos seus dentes.
+                Na Oral Clinic, na Boca do Rio, em Salvador, o clareamento é indicado após avaliação, com
+                acompanhamento da sensibilidade e respeito ao tom natural dos seus dentes.
               </p>
               <WhatsAppButton href={CTA}>Agendar avaliação de clareamento</WhatsAppButton>
               <div className="flex w-full max-w-[500px] flex-col gap-3">
@@ -290,7 +292,7 @@ export default function Clareamento() {
 
         <FaqColumns items={FAQ} />
         <CtaFinal
-          title="Agende sua avaliação de clareamento dental."
+          title="Agende sua avaliação de clareamento dental na Boca do Rio."
           lead="Envie uma mensagem e escolha o horário para avaliar o seu sorriso."
           buttonLabel="Agendar avaliação de clareamento"
           href={CTA}
