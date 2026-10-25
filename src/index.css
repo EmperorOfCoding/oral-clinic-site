@@ -93,4 +93,18 @@
   .rule {
     @apply h-px w-full bg-ink/[0.08];
   }
+
+  /* Landing pages por servico (rotas de anuncio). */
+  .lp-h2 {
+    @apply font-display text-[2rem] font-normal leading-[1.12] tracking-[-0.025em] text-ink sm:text-[2.5rem] lg:text-[3rem];
+  }
+
+  .lp-lead {
+    @apply text-[1.05rem] leading-relaxed text-graphite lg:text-[1.125rem] lg:leading-[1.65];
+  }
+
+  /* Numero editorial de passo, em champagne escuro. */
+  .lp-num {
+    @apply font-display text-base text-champagne-dark;
+  }
 }

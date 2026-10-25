@@ -6,11 +6,12 @@ import { inject } from '@vercel/analytics';
 
 inject();
 const container = document.getElementById('app');
+const path = window.location.pathname;
 
 // Em producao o HTML ja vem pre-renderizado (SSG) -> hidrata.
 // Em desenvolvimento o container esta vazio -> renderiza do zero.
 if (container.hasChildNodes()) {
-  hydrateRoot(container, <App />, { onRecoverableError: () => {} });
+  hydrateRoot(container, <App path={path} />, { onRecoverableError: () => {} });
 } else {
-  createRoot(container).render(<App />);
+  createRoot(container).render(<App path={path} />);
 }

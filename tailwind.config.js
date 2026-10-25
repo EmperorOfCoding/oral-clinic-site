@@ -38,6 +38,10 @@ export default {
         graphite: '#4a4550',
         // Off-white clinico: fundo principal.
         cloud: '#fbfafc',
+        // Lilas acinzentado: texto secundario sobre fundo escuro (landing pages).
+        mist: { DEFAULT: '#d9cfe3', light: '#ebe4f0' },
+        // Verde WhatsApp: CTA da landing de canal e botao flutuante.
+        wa: { DEFAULT: '#1fa855', dark: '#178f47' },
       },
       fontFamily: {
         display: ['Fraunces', 'Georgia', 'serif'],
