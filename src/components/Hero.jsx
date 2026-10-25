@@ -38,7 +38,8 @@ export default function Hero() {
 
             <p className="mt-6 max-w-xl text-[1.05rem] leading-relaxed text-graphite">
               Na Oral Clinic, cada tratamento é planejado com atenção à saúde, à
-              estética natural e ao conforto do paciente.
+              estética natural e ao conforto do paciente, com cuidado integral e segurança em
+              cada etapa.
             </p>
 
             <motion.div variants={item} className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">

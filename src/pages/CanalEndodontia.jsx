@@ -153,8 +153,8 @@ export default function CanalEndodontia() {
                 Canal e endodontia | Boca do Rio, Salvador
               </p>
               <h1 className="font-display text-[2.9rem] font-medium leading-[1.05] tracking-[-0.025em] text-white sm:text-[4.25rem]">
-                <span className="block">Dor de dente</span>
-                <span className="block italic text-champagne">não deve esperar.</span>
+                <span className="block">Dor de dente</span>{' '}
+                <span className="block italic text-champagne">não deve esperar.</span>{' '}
                 <span className="mt-3 block text-[0.34em] font-normal leading-snug tracking-normal text-[#efe6f7]">
                   Tratamento de canal na Boca do Rio, em Salvador
                 </span>

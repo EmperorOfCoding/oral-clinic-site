@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { MessageCircle } from 'lucide-react';
 
 // Primitivas compartilhadas pelas landing pages de servico.
@@ -48,12 +49,16 @@ export function Headline({ lines, place, accent = 'text-brand-700', color = 'tex
     >
       {lines.map((line, index) => {
         const isAccent = index === lines.length - 1;
+        // O espaco entre as linhas evita que leitores de texto (rastreadores,
+        // leitores de tela) juntem as palavras de linhas vizinhas.
         return (
-          <span key={line} className={`block ${isAccent ? `italic ${accent}` : ''}`}>
-            {line}
-          </span>
+          <Fragment key={line}>
+            {index > 0 && ' '}
+            <span className={`block ${isAccent ? `italic ${accent}` : ''}`}>{line}</span>
+          </Fragment>
         );
       })}
+      {place && ' '}
       {place && (
         <span className={`mt-4 block text-[0.3em] font-normal not-italic leading-snug tracking-normal ${accent}`}>
           {place}
