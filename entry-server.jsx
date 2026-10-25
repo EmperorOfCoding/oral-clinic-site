@@ -12,5 +12,7 @@ export const routes = ROUTES.map((route) => ({
   path: route.path,
   title: route.title,
   description: route.description,
+  ogImage: route.ogImage,
+  ogAlt: route.ogAlt,
   jsonLd: route.faq ? buildJsonLd(route) : [],
 }));

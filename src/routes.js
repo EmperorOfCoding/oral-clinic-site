@@ -15,6 +15,8 @@ export const ROUTES = [
   { path: '/', Page: Home },
   {
     path: '/protese',
+    ogImage: '/images/og/protese.jpg',
+    ogAlt: 'Prótese dentária na Boca do Rio, Salvador | Oral Clinic',
     Page: Protese,
     service: 'Prótese dentária',
     crumb: 'Prótese dentária',
@@ -25,6 +27,8 @@ export const ROUTES = [
   },
   {
     path: '/clareamento',
+    ogImage: '/images/og/clareamento.jpg',
+    ogAlt: 'Clareamento dental na Boca do Rio, Salvador | Oral Clinic',
     Page: Clareamento,
     service: 'Clareamento dental',
     crumb: 'Clareamento dental',
@@ -35,6 +39,8 @@ export const ROUTES = [
   },
   {
     path: '/periodontia',
+    ogImage: '/images/og/periodontia.jpg',
+    ogAlt: 'Periodontia na Boca do Rio, Salvador | Oral Clinic',
     Page: Periodontia,
     service: 'Periodontia',
     crumb: 'Periodontia',
@@ -45,6 +51,8 @@ export const ROUTES = [
   },
   {
     path: '/implantes',
+    ogImage: '/images/og/implantes.jpg',
+    ogAlt: 'Implantes dentários na Boca do Rio, Salvador | Oral Clinic',
     Page: Implantes,
     service: 'Implantes dentários',
     crumb: 'Implante dentário',
@@ -55,6 +63,8 @@ export const ROUTES = [
   },
   {
     path: '/canal-endodontia',
+    ogImage: '/images/og/canal-endodontia.jpg',
+    ogAlt: 'Tratamento de canal na Boca do Rio, Salvador | Oral Clinic',
     Page: CanalEndodontia,
     service: 'Tratamento de canal e endodontia',
     crumb: 'Tratamento de canal',
