@@ -107,7 +107,7 @@ export default function Clareamento() {
       <main>
         <section className="bg-lavanda-100">
           <LpHeader tone="light" ctaHref={CTA} />
-          <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-5 pb-14 pt-6 sm:px-8 lg:grid-cols-[1fr_560px] lg:gap-[88px] lg:pb-[88px] lg:pt-10 xl:px-24">
+          <div className="mx-auto grid grid-cols-1 max-w-[1440px] items-center gap-12 px-5 pb-14 pt-6 sm:px-8 lg:grid-cols-[1fr_560px] lg:gap-[88px] lg:pb-[88px] lg:pt-10 xl:px-24">
             <div className="flex flex-col items-start gap-8">
               <Eyebrow>Clareamento dental | Boca do Rio, Salvador</Eyebrow>
               <Headline

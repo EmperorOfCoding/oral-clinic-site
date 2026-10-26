@@ -105,7 +105,7 @@ export default function Protese() {
       <main>
         <section className="bg-ink">
           <LpHeader tone="dark" ctaHref={CTA} />
-          <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-5 pb-16 pt-6 sm:px-8 lg:grid-cols-[1fr_520px] lg:gap-[72px] lg:pb-[72px] lg:pt-14 xl:px-24">
+          <div className="mx-auto grid grid-cols-1 max-w-[1440px] items-center gap-12 px-5 pb-16 pt-6 sm:px-8 lg:grid-cols-[1fr_520px] lg:gap-[72px] lg:pb-[72px] lg:pt-14 xl:px-24">
             <div className="flex flex-col items-start gap-7">
               <Eyebrow tone="light">Prótese dentária | Boca do Rio, Salvador</Eyebrow>
               <Headline

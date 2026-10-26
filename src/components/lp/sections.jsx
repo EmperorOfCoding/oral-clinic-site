@@ -25,7 +25,7 @@ export function LpHeader({ tone = 'light', ctaHref }) {
           className="h-11 w-11 rounded-[10px]"
         />
         <span className="flex flex-col">
-          <span className={`font-display text-xl leading-tight ${style.name}`}>Oral Clinic</span>
+          <span className={`whitespace-nowrap font-display text-xl leading-tight ${style.name}`}>Oral Clinic</span>
           <span className={`hidden text-[0.69rem] tracking-[0.11em] sm:block ${style.sub}`}>Odontologia e Estética</span>
         </span>
       </a>
@@ -34,7 +34,7 @@ export function LpHeader({ tone = 'light', ctaHref }) {
           {CLINIC.phoneDisplay}
         </a>
         <WhatsAppButton href={ctaHref} variant={style.cta} size="sm">
-          Agendar avaliação
+          Agendar<span className="hidden sm:inline">&nbsp;avaliação</span>
         </WhatsAppButton>
       </div>
     </header>

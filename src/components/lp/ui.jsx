@@ -79,16 +79,19 @@ const BUTTON_VARIANTS = {
 export function WhatsAppButton({ href, children, variant = 'primary', size = 'md', className = '' }) {
   const sizes = {
     sm: 'px-[22px] py-3 text-sm gap-2',
-    md: 'px-[30px] py-[18px] text-base gap-2.5',
-    lg: 'px-8 py-5 text-lg gap-3',
+    md: 'px-6 py-[18px] text-base gap-2.5 sm:px-[30px]',
+    lg: 'px-6 py-5 text-lg gap-3 sm:px-8',
   };
+  // Botoes md e lg podem quebrar linha em telas estreitas (360px); o sm do
+  // cabecalho nunca quebra.
+  const wrap = size === 'sm' ? 'whitespace-nowrap' : 'max-w-full whitespace-normal text-center sm:whitespace-nowrap';
   const shape = variant === 'green' ? '' : 'rounded-full';
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex items-center justify-center whitespace-nowrap font-bold transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${shape} ${sizes[size]} ${BUTTON_VARIANTS[variant]} ${className}`}
+      className={`inline-flex items-center justify-center ${wrap} font-bold transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${shape} ${sizes[size]} ${BUTTON_VARIANTS[variant]} ${className}`}
     >
       <MessageCircle className={size === 'sm' ? 'h-4 w-4' : 'h-5 w-5'} strokeWidth={1.8} aria-hidden="true" />
       {children}
