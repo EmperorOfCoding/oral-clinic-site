@@ -25,7 +25,7 @@ const CTA = whatsappLink(
 );
 
 const FACTS = [
-  { title: '12 anos', text: 'de experiência em odontologia' },
+  { title: '17 anos', text: 'de experiência em odontologia' },
   { title: 'Avaliação', text: 'presencial antes de qualquer tratamento' },
   { title: 'Seg a sex', text: 'atendimento na Boca do Rio' },
 ];

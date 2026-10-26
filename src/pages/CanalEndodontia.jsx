@@ -26,7 +26,7 @@ const CTA_DOR = whatsappLink(
 
 const SELOS = [
   { Icon: BadgeCheck, text: 'CRO-BA 10244' },
-  { Icon: CalendarClock, text: '12 anos de experiência' },
+  { Icon: CalendarClock, text: '17 anos de experiência' },
   { Icon: ScanLine, text: 'Avaliação presencial' },
 ];
 
@@ -65,7 +65,7 @@ const ETAPAS = [
 ];
 
 const FATOS = [
-  { title: '12 anos', text: 'de experiência' },
+  { title: '17 anos', text: 'de experiência' },
   { title: 'CRO-BA', text: '10244' },
   { title: 'Seg a sex', text: 'na Boca do Rio' },
 ];
