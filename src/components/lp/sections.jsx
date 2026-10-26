@@ -75,7 +75,7 @@ export function FaqColumns({ items }) {
   return (
     <Section bg="bg-lavanda-100" className="lg:py-24" innerClassName="flex flex-col gap-12">
       <Eyebrow>Perguntas frequentes</Eyebrow>
-      <dl className={`grid gap-10 md:gap-14 ${items.length > 3 ? 'md:grid-cols-2 lg:grid-cols-4 lg:gap-10' : 'md:grid-cols-3'}`}>
+      <dl className={`grid gap-10 md:gap-14 ${items.length === 4 ? 'md:grid-cols-2 lg:grid-cols-4 lg:gap-10' : items.length > 4 ? 'md:grid-cols-2 lg:grid-cols-3' : 'md:grid-cols-3'}`}>
         {items.map((item) => (
           <div key={item.question} className="flex flex-col gap-3 border-t border-ink pt-6">
             <dt className="font-display text-2xl leading-[1.25] text-ink">{item.question}</dt>

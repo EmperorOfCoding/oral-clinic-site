@@ -86,6 +86,16 @@ export const FAQ = [
       'Depende do caso. A restauração que protege o dente é definida na avaliação e apresentada no plano.',
   },
   {
+    question: 'Vocês fazem retratamento de canal?',
+    answer:
+      'Sim. O retratamento é indicado quando um dente que já passou por canal volta a doer ou apresenta infecção. O exame clínico e a radiografia mostram se é o seu caso.',
+  },
+  {
+    question: 'A Oral Clinic atende com endodontista?',
+    answer:
+      'A endodontia, área da odontologia que trata o interior do dente, é feita na Oral Clinic. Na avaliação, definimos o tratamento indicado para o seu dente.',
+  },
+  {
     question: 'Como agendo e onde fica a clínica?',
     answer: `Pelo WhatsApp, no ${CLINIC.phoneDisplay}. A clínica fica na ${CLINIC.address.line1}, ${CLINIC.address.line2}. Atendimento de segunda a quinta, ${OPENING_HOURS[0].hours}, e sexta, ${OPENING_HOURS[1].hours}.`,
   },

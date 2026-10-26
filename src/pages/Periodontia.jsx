@@ -60,7 +60,7 @@ const ETAPAS = [
     title: 'Exame da gengiva',
     text: 'Sondagem para medir a saúde dos tecidos ao redor dos dentes.',
   },
-  { title: 'Limpeza profissional', text: 'Remoção de placa e tártaro, com conforto.' },
+  { title: 'Limpeza e raspagem', text: 'Remoção de placa e tártaro, inclusive abaixo da gengiva, com conforto.' },
   { title: 'Orientação de higiene', text: 'Você aprende a cuidar da gengiva em casa.' },
   { title: 'Retornos de manutenção', text: 'Acompanhamento para preservar o resultado.' },
 ];
@@ -95,6 +95,11 @@ export const FAQ = [
   {
     question: 'Quanto custa?',
     answer: 'O valor depende do caso e é informado após a avaliação presencial.',
+  },
+  {
+    question: 'O que é raspagem dental?',
+    answer:
+      'É a limpeza mais profunda, feita abaixo da gengiva, para remover tártaro e placa. A avaliação indica se ela é necessária no seu caso.',
   },
   localFaq('periodontia'),
 ];
