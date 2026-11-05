@@ -59,7 +59,7 @@ export const ROUTES = [
     faq: ImplantesFaq,
     title: 'Implantes dentários na Boca do Rio, Salvador | Oral Clinic',
     description:
-      'Implante dentário planejado caso a caso, com avaliação e exames antes de qualquer procedimento. Oral Clinic, Boca do Rio, Salvador. Agende pelo WhatsApp.',
+      'Perdeu um dente? Na Oral Clinic, na Boca do Rio, o implante começa com uma avaliação: conheça o plano e o valor antes de decidir. Agende pelo WhatsApp.',
   },
   {
     path: '/canal-endodontia',

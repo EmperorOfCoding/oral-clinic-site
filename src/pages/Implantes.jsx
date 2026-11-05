@@ -38,7 +38,7 @@ const CASOS = [
   {
     mark: '1',
     title: 'Perdi um dente',
-    text: 'Reposição individual, sem apoiar nos dentes vizinhos.',
+    text: 'Repõe só o dente perdido, sem apoiar nos dentes vizinhos.',
   },
   {
     mark: '2+',
@@ -47,8 +47,8 @@ const CASOS = [
   },
   {
     mark: 'Total',
-    title: 'Minha dentadura solta',
-    text: 'Sua dentadura se mexe? A prótese sobre implantes dá mais estabilidade.',
+    title: 'Minha dentadura não firma',
+    text: 'Sua dentadura se mexe? A prótese sobre implantes pode dar mais estabilidade.',
   },
 ];
 
@@ -56,7 +56,7 @@ const ETAPAS = [
   { title: 'Avaliação e exames', text: 'Exame clínico e de imagem da região.' },
   { title: 'Planejamento', text: 'Definimos o plano e você o conhece por inteiro.' },
   { title: 'Cirurgia', text: 'Colocação do implante, com anestesia local.' },
-  { title: 'Cicatrização', text: 'Período de integração, com retornos.' },
+  { title: 'Cicatrização', text: 'O implante se integra ao osso, e você volta para os retornos.' },
   { title: 'Prótese final', text: 'Instalamos a coroa ou a prótese sobre o implante.' },
 ];
 
@@ -87,7 +87,8 @@ export const FAQ = [
   },
   {
     question: 'Quanto custa?',
-    answer: 'O valor depende do caso e é informado após a avaliação presencial.',
+    answer:
+      'O valor depende de quantos dentes serão repostos, dos exames e do tipo de prótese. Na avaliação, você recebe o plano com o valor do seu caso antes de decidir.',
   },
   localFaq('implantes dentários'),
 ];
@@ -101,16 +102,16 @@ export default function Implantes() {
           <div className="relative z-10 flex flex-1 items-center px-5 pb-16 pt-6 sm:px-8 lg:pb-20 lg:pt-8 xl:px-24">
             <div className="mx-auto grid w-full max-w-[1248px] items-center gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:gap-10 xl:grid-cols-[minmax(0,1fr)_520px]">
               <div className="flex flex-col items-start gap-[26px]">
-                <Eyebrow>Implantes dentários | Boca do Rio, Salvador</Eyebrow>
+                <Eyebrow>Tratamento com implantes dentários</Eyebrow>
                 <Headline
-                  lines={['Perdeu um dente?', 'Cuidamos do seu', 'implante até o fim.']}
+                  lines={['Perdeu um dente?', 'Seu implante começa', 'com uma avaliação.']}
                   place="Implantes dentários na Boca do Rio, em Salvador"
-                  className="text-[2.125rem] sm:text-[3.5rem] lg:text-[3.125rem] xl:text-[3.375rem] min-[1400px]:text-[4.5rem]"
+                  className="text-[2rem] sm:text-[3.5rem] lg:text-[3.125rem] xl:text-[3.375rem] min-[1400px]:text-[4.5rem]"
                 />
                 <p className="max-w-[500px] text-lg leading-relaxed text-graphite">
-                  Avaliação, exames, cirurgia e retornos com a equipe da Oral Clinic, na Boca do Rio. Cada etapa é explicada antes de começar.
+                  Na avaliação, você faz os exames, conhece o plano e recebe o valor do tratamento antes de decidir.
                 </p>
-                <WhatsAppButton href={CTA}>Agendar avaliação de implante</WhatsAppButton>
+                <WhatsAppButton href={CTA}>Agendar avaliação e saber o valor</WhatsAppButton>
                 <p className="max-w-[500px] text-sm leading-normal text-graphite">
                   Somos uma clínica e atendemos pacientes. Não vendemos peças nem componentes de implante.
                 </p>
@@ -162,7 +163,7 @@ export default function Implantes() {
 
         <Section bg="bg-lavanda-100" innerClassName="flex flex-col gap-14">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <SectionTitle eyebrow="Para quem é">Do dente isolado à arcada completa.</SectionTitle>
+            <SectionTitle eyebrow="Para quem é">De um dente a todos os dentes.</SectionTitle>
             <p className="shrink-0 text-[0.94rem] text-graphite">Cada situação pede um plano diferente.</p>
           </div>
           <div className="grid md:grid-cols-3">
@@ -237,7 +238,7 @@ export default function Implantes() {
         <CtaFinal
           title="Agende sua avaliação de implantes na Boca do Rio."
           lead="Fale com a nossa equipe pelo WhatsApp e escolha o melhor horário."
-          buttonLabel="Agendar avaliação de implante"
+          buttonLabel="Agendar avaliação e saber o valor"
           href={CTA}
         />
       </main>
