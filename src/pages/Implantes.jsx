@@ -136,10 +136,10 @@ export default function Implantes() {
           </SectionTitle>
           <div className="relative flex flex-col items-center gap-10 lg:block lg:h-[720px]">
             <FramedPhoto
-              src="/images/lp/im-servico-plano.webp"
-              alt="Dentista mostrando uma radiografia panorâmica à paciente e explicando o plano de tratamento"
-              width="960"
-              height="1440"
+              src="/images/lp/dra-acolhimento.webp"
+              alt="Dra. Marcela sorrindo ao lado de uma paciente na Oral Clinic"
+              width="743"
+              height="1115"
               radius="rounded-full"
               className="aspect-[480/720] w-[calc(100%-0.75rem)] max-w-[480px] lg:absolute lg:left-1/2 lg:top-0 lg:w-[480px] lg:-translate-x-[calc(50%+12px)]"
             />
@@ -185,10 +185,10 @@ export default function Implantes() {
 
         <Section bg="bg-ink" innerClassName="grid items-center gap-14 lg:grid-cols-[600px_1fr] lg:gap-[88px]">
           <FramedPhoto
-            src="/images/lp/im-servico-cuidado.webp"
-            alt="Dentista tranquilizando uma paciente na cadeira odontológica, com a assistente ao lado"
-            width="1000"
-            height="1000"
+            src="/images/lp/dra-tratamento.webp"
+            alt="Dentista da Oral Clinic realizando um procedimento em paciente no consultório"
+            width="935"
+            height="1031"
             className="aspect-[576/636] w-[calc(100%-0.75rem)] max-w-[576px] lg:w-[576px]"
           />
           <div className="flex flex-col gap-7">
