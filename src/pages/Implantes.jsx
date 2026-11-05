@@ -23,31 +23,31 @@ const CTA = whatsappLink(
 );
 
 const FACTS = [
-  { title: 'Avaliação', text: 'com exames antes de planejar' },
+  { title: '17 anos', text: 'de experiência em odontologia' },
   { title: 'Dra. Marcela', text: 'responsável técnica, CRO-BA 10244' },
   { title: 'Seg a sex', text: 'atendimento na Boca do Rio' },
 ];
 
-const PECAS = [
-  { title: 'Coroa', text: 'A parte visível, feita com aparência natural.', position: 'left', top: 'lg:top-[150px]' },
-  { title: 'Pilar', text: 'Peça que conecta a coroa ao implante.', position: 'right', top: 'lg:top-[290px]' },
-  { title: 'Implante', text: 'Apoio de titânio, colocado no osso.', position: 'left', top: 'lg:top-[480px]' },
+const CUIDADOS = [
+  { title: 'Escuta e avaliação', text: 'Entendemos sua queixa e fazemos exame clínico e de imagem.', position: 'left', top: 'lg:top-[150px]' },
+  { title: 'Plano para o seu caso', text: 'Você conhece as etapas e o valor antes de começar.', position: 'right', top: 'lg:top-[290px]' },
+  { title: 'Acompanhamento', text: 'Retornos na cicatrização e até a prótese final.', position: 'left', top: 'lg:top-[480px]' },
 ];
 
 const CASOS = [
   {
     mark: '1',
-    title: 'Um dente ausente',
+    title: 'Perdi um dente',
     text: 'Reposição individual, sem apoiar nos dentes vizinhos.',
   },
   {
     mark: '2+',
-    title: 'Vários dentes',
+    title: 'Perdi vários dentes',
     text: 'Implantes que sustentam pontes ou próteses parciais.',
   },
   {
     mark: 'Total',
-    title: 'Dentadura que não firma',
+    title: 'Minha dentadura solta',
     text: 'Sua dentadura se mexe? A prótese sobre implantes dá mais estabilidade.',
   },
 ];
@@ -55,9 +55,24 @@ const CASOS = [
 const ETAPAS = [
   { title: 'Avaliação e exames', text: 'Exame clínico e de imagem da região.' },
   { title: 'Planejamento', text: 'Definimos o plano e você o conhece por inteiro.' },
-  { title: 'Cirurgia', text: 'Colocação do implante, com atenção ao conforto.' },
+  { title: 'Cirurgia', text: 'Colocação do implante, com anestesia local.' },
   { title: 'Cicatrização', text: 'Período de integração, com retornos.' },
-  { title: 'Prótese final', text: 'Coroa ou prótese sobre o implante.' },
+  { title: 'Prótese final', text: 'Instalamos a coroa ou a prótese sobre o implante.' },
+];
+
+const EQUIPE_FOTOS = [
+  {
+    src: '/images/lp/dra-paciente.webp',
+    alt: 'Dra. Marcela em atendimento a uma paciente no consultório da Oral Clinic',
+    width: '900',
+    height: '1200',
+  },
+  {
+    src: '/images/lp/atendimento-consultorio.webp',
+    alt: 'Dentista da equipe atendendo uma paciente no consultório da Oral Clinic',
+    width: '675',
+    height: '1200',
+  },
 ];
 
 export const FAQ = [
@@ -81,66 +96,65 @@ export default function Implantes() {
   return (
     <div className="min-h-dvh bg-cloud">
       <main>
-        <section className="relative flex flex-col overflow-hidden bg-lavanda-100 lg:min-h-[900px]">
-          <img
-            src="/images/lp/im-hero.webp"
-            alt="Implantes dentários e pilar de titânio sobre um prato lilás com tecido roxo ao fundo"
-            width="2000"
-            height="1250"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-            className="absolute inset-0 h-full w-full object-cover object-[78%_center]"
-          />
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 bg-lavanda-100/85 lg:bg-transparent"
-          />
-          <LpHeader tone="overlay" ctaHref={CTA} />
-          <div className="relative z-10 flex flex-1 items-center px-5 pb-14 pt-6 sm:px-8 lg:pb-16 lg:pt-10 xl:px-24">
-            <div className="mx-auto w-full max-w-[1248px]">
-              <div className="flex max-w-[640px] flex-col items-start gap-[30px]">
+        <section className="relative flex flex-col overflow-hidden bg-lavanda-100">
+          <LpHeader tone="light" ctaHref={CTA} />
+          <div className="relative z-10 flex flex-1 items-center px-5 pb-16 pt-6 sm:px-8 lg:pb-20 lg:pt-8 xl:px-24">
+            <div className="mx-auto grid w-full max-w-[1248px] items-center gap-12 lg:grid-cols-[minmax(0,1fr)_420px] lg:gap-10 xl:grid-cols-[minmax(0,1fr)_520px]">
+              <div className="flex flex-col items-start gap-[26px]">
                 <Eyebrow>Implantes dentários | Boca do Rio, Salvador</Eyebrow>
                 <Headline
-                  lines={['Reponha o dente', 'que faltou,', 'com firmeza.']}
+                  lines={['Perdeu um dente?', 'Cuidamos do seu', 'implante até o fim.']}
                   place="Implantes dentários na Boca do Rio, em Salvador"
-                  className="text-[2.75rem] sm:text-[4.25rem] lg:text-[4.875rem] lg:leading-[1.03]"
+                  className="text-[2.125rem] sm:text-[3.5rem] lg:text-[3.125rem] xl:text-[3.375rem] min-[1400px]:text-[4.5rem]"
                 />
                 <p className="max-w-[500px] text-lg leading-relaxed text-graphite">
-                  Na Oral Clinic, na Boca do Rio, em Salvador, o implante é planejado caso a caso, com avaliação e exames antes de qualquer procedimento.
+                  Avaliação, exames, cirurgia e retornos com a equipe da Oral Clinic, na Boca do Rio. Cada etapa é explicada antes de começar.
                 </p>
                 <WhatsAppButton href={CTA}>Agendar avaliação de implante</WhatsAppButton>
+                <p className="max-w-[500px] text-sm leading-normal text-graphite">
+                  Somos uma clínica e atendemos pacientes. Não vendemos peças nem componentes de implante.
+                </p>
               </div>
+              <FramedPhoto
+                src="/images/lp/dra-marcela-implantes.webp"
+                alt="Dra. Marcela Karin, responsável técnica da Oral Clinic, sorrindo no consultório"
+                width="1040"
+                height="1126"
+                eager
+                fetchPriority="high"
+                objectPosition="center top"
+                className="aspect-[520/600] w-[calc(100%-0.75rem)] max-w-[520px] justify-self-center lg:w-[calc(100%-1.5rem)]"
+              />
             </div>
           </div>
           <FactsBar facts={FACTS} tone="dark" compact className="relative z-10 bg-ink" />
         </section>
 
         <Section innerClassName="flex flex-col gap-16">
-          <SectionTitle eyebrow="Como é o implante" className="items-center text-center">
-            Três peças, uma estrutura firme.
+          <SectionTitle eyebrow="Como cuidamos de você" className="items-center text-center">
+            Três cuidados, um tratamento completo.
           </SectionTitle>
           <div className="relative flex flex-col items-center gap-10 lg:block lg:h-[720px]">
             <FramedPhoto
-              src="/images/lp/im-pecas.webp"
-              alt="Coroa, pilar e implante de titânio dispostos lado a lado"
-              width="1000"
-              height="1500"
+              src="/images/lp/im-servico-plano.webp"
+              alt="Dentista mostrando uma radiografia panorâmica à paciente e explicando o plano de tratamento"
+              width="960"
+              height="1440"
               radius="rounded-full"
               className="aspect-[480/720] w-[calc(100%-0.75rem)] max-w-[480px] lg:absolute lg:left-1/2 lg:top-0 lg:w-[480px] lg:-translate-x-[calc(50%+12px)]"
             />
-            {PECAS.map((peca, index) => (
+            {CUIDADOS.map((cuidado, index) => (
               <div
-                key={peca.title}
-                className={`flex w-full max-w-[480px] flex-col gap-2 border-t border-ink/[0.09] pt-[18px] lg:absolute lg:w-[330px] lg:max-w-none ${peca.top} ${
-                  peca.position === 'right' ? 'lg:right-0' : 'lg:left-0 lg:items-end lg:text-right'
+                key={cuidado.title}
+                className={`flex w-full max-w-[480px] flex-col gap-2 border-t border-ink/[0.09] pt-[18px] lg:absolute lg:w-[330px] lg:max-w-none ${cuidado.top} ${
+                  cuidado.position === 'right' ? 'lg:right-0' : 'lg:left-0 lg:items-end lg:text-right'
                 }`}
               >
                 <span className="font-display text-[0.94rem] text-champagne-dark">
                   {String(index + 1).padStart(2, '0')}
                 </span>
-                <h3 className="font-display text-[2rem] leading-tight tracking-[-0.02em] text-ink">{peca.title}</h3>
-                <p className="text-base leading-6 text-graphite">{peca.text}</p>
+                <h3 className="font-display text-[1.875rem] leading-tight tracking-[-0.02em] text-ink">{cuidado.title}</h3>
+                <p className="text-base leading-6 text-graphite">{cuidado.text}</p>
               </div>
             ))}
           </div>
@@ -171,14 +185,14 @@ export default function Implantes() {
 
         <Section bg="bg-ink" innerClassName="grid items-center gap-14 lg:grid-cols-[600px_1fr] lg:gap-[88px]">
           <FramedPhoto
-            src="/images/lp/im-modelo.webp"
-            alt="Modelo de arcada dentária com implantes sobre superfície clara"
-            width="1200"
-            height="1320"
+            src="/images/lp/im-servico-cuidado.webp"
+            alt="Dentista tranquilizando uma paciente na cadeira odontológica, com a assistente ao lado"
+            width="1000"
+            height="1000"
             className="aspect-[576/636] w-[calc(100%-0.75rem)] max-w-[576px] lg:w-[576px]"
           />
           <div className="flex flex-col gap-7">
-            <Eyebrow tone="light">O caminho</Eyebrow>
+            <Eyebrow tone="light">Seu tratamento, passo a passo</Eyebrow>
             <h2 className="lp-h2 text-white lg:text-[3rem] lg:leading-[1.08]">Cada etapa explicada antes de começar.</h2>
             <RuleList tone="dark">
               {ETAPAS.map((etapa, index) => (
@@ -195,10 +209,34 @@ export default function Implantes() {
           </div>
         </Section>
 
+        <Section innerClassName="grid items-center gap-12 lg:grid-cols-[480px_1fr] lg:gap-[88px]">
+          <div className="flex flex-col gap-6">
+            <SectionTitle eyebrow="Quem cuida de você">Dra. Marcela Karin e equipe.</SectionTitle>
+            <p className="text-lg leading-relaxed text-graphite">
+              Com 17 anos de experiência, a Dra. Marcela é a responsável técnica da Oral Clinic. Aqui, você sabe quem cuida do seu tratamento e tem com quem falar em cada etapa.
+            </p>
+            <p className="text-sm font-semibold text-ink">Cirurgiã-dentista, CRO-BA 10244</p>
+          </div>
+          <div className="grid grid-cols-2 gap-3 sm:gap-6">
+            {EQUIPE_FOTOS.map((foto) => (
+              <img
+                key={foto.src}
+                src={foto.src}
+                alt={foto.alt}
+                width={foto.width}
+                height={foto.height}
+                loading="lazy"
+                decoding="async"
+                className="aspect-[328/460] h-full w-full rounded-3xl object-cover"
+              />
+            ))}
+          </div>
+        </Section>
+
         <FaqColumns items={FAQ} />
         <CtaFinal
           title="Agende sua avaliação de implantes na Boca do Rio."
-          lead="Envie uma mensagem e escolha o horário da sua avaliação com exames."
+          lead="Fale com a nossa equipe pelo WhatsApp e escolha o melhor horário."
           buttonLabel="Agendar avaliação de implante"
           href={CTA}
         />

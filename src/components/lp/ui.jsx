@@ -108,6 +108,7 @@ export function FramedPhoto({
   offset = 'right',
   className = '',
   eager = false,
+  fetchPriority,
   width,
   height,
   objectPosition,
@@ -125,6 +126,7 @@ export function FramedPhoto({
         width={width}
         height={height}
         loading={eager ? 'eager' : 'lazy'}
+        fetchpriority={fetchPriority}
         decoding="async"
         className={`relative h-full w-full object-cover ${radius}`}
         style={objectPosition ? { objectPosition } : undefined}
