@@ -1,5 +1,4 @@
 import { localFaq, whatsappLink } from '../lib/site.js';
-import { VideoCaso } from '../components/lp/VideoCaso.jsx';
 import {
   CtaFinal,
   FactsBar,
@@ -131,19 +130,6 @@ export default function Implantes() {
           </div>
           <FactsBar facts={FACTS} tone="dark" compact className="relative z-10 bg-ink" />
         </section>
-
-        <Section innerClassName="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,460px)] lg:gap-16">
-          <VideoCaso />
-          <div className="flex flex-col gap-6">
-            <SectionTitle eyebrow="Caso atendido na Oral Clinic">Da prótese folgada à prótese nova.</SectionTitle>
-            <p className="text-lg leading-relaxed text-graphite">
-              Uma paciente chegou com a prótese gasta e folgada. No vídeo, a Dra. Marcela Karin mostra a entrega da nova prótese total superior.
-            </p>
-            <p className="text-sm text-graphite">
-              Caso de prótese total, sem implante, divulgado com autorização da paciente. Cada tratamento depende da avaliação.
-            </p>
-          </div>
-        </Section>
 
         <Section innerClassName="flex flex-col gap-16">
           <SectionTitle eyebrow="Como cuidamos de você" className="items-center text-center">
