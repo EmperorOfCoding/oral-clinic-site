@@ -46,13 +46,13 @@ export const WHATSAPP_GMB_URL = whatsappLink(
 );
 
 // Links de navegacao do header. Cada href precisa corresponder ao id de uma
-// secao renderizada em App.jsx, senao a navegacao falha silenciosamente.
+// secao renderizada em pages/Home.jsx, senao a navegacao falha silenciosamente.
 export const NAV_LINKS = [
-  { label: 'A clínica', href: '#a-clinica' },
-  { label: 'Tratamentos', href: '#tratamentos' },
+  { label: 'Depoimentos', href: '#depoimentos' },
   { label: 'Casos reais', href: '#casos-reais' },
   { label: 'Atendimento', href: '#atendimento' },
-  { label: 'Depoimentos', href: '#depoimentos' },
+  { label: 'Tratamentos', href: '#tratamentos' },
+  { label: 'A clínica', href: '#a-clinica' },
   { label: 'Localização', href: '#localizacao' },
 ];
 

@@ -6,7 +6,7 @@ import { stagger, fadeUp, inView } from '../lib/motion.js';
 const fotos = [
   {
     id: 'fachada',
-    url: '/images/foto_estabelecimento.png',
+    url: '/images/home/fachada.webp',
     caption: 'Fachada na Rua Hélio Machado, na Boca do Rio',
     alt: 'Fachada da Oral Clinic com letreiro roxo e entrada para a recepção',
     span: 'sm:col-span-2 sm:row-span-2',
@@ -14,7 +14,7 @@ const fotos = [
   },
   {
     id: 'atendimento-infantil',
-    url: '/images/foto_2_oral_clinic.png',
+    url: '/images/home/atendimento-recepcao.webp',
     caption: 'Atendimento infantil',
     alt: 'Profissional da Oral Clinic sorrindo ao lado de paciente criança na cadeira odontológica',
     span: 'sm:col-span-1',
@@ -22,7 +22,7 @@ const fotos = [
   },
   {
     id: 'procedimento',
-    url: '/images/foto_4_oral_clinic.png',
+    url: '/images/home/atendimento-procedimento.webp',
     caption: 'Procedimento estético em andamento',
     alt: 'Profissional da Oral Clinic realizando procedimento estético com equipamento de proteção',
     span: 'sm:col-span-1',
@@ -30,7 +30,7 @@ const fotos = [
   },
   {
     id: 'acolhimento',
-    url: '/images/foto_3_oral_clinic.png',
+    url: '/images/home/atendimento-acolhimento.webp',
     caption: 'Acolhimento durante a consulta',
     alt: 'Equipe da Oral Clinic acolhendo paciente adulta e criança durante a consulta',
     span: 'sm:col-span-2',
@@ -40,7 +40,7 @@ const fotos = [
 
 export default function ClinicGallery() {
   return (
-    <section className="py-20 sm:py-28">
+    <section id="a-clinica" className="py-20 sm:py-28">
       <div className="container-page">
         <SectionHeading
           eyebrow="A clínica"

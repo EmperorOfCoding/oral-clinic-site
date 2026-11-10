@@ -1,12 +1,13 @@
 import Header from '../components/Header.jsx';
 import Hero from '../components/Hero.jsx';
-import PainPoints from '../components/PainPoints.jsx';
-import CasosReais from '../components/CasosReais.jsx';
-import Treatments from '../components/Treatments.jsx';
-import Differentials from '../components/Differentials.jsx';
-import ClinicGallery from '../components/ClinicGallery.jsx';
-import Process from '../components/Process.jsx';
 import Testimonials from '../components/Testimonials.jsx';
+import CasosReais from '../components/CasosReais.jsx';
+import ParaQuem from '../components/ParaQuem.jsx';
+import Process from '../components/Process.jsx';
+import SobreDoutora from '../components/SobreDoutora.jsx';
+import HomeFaq from '../components/HomeFaq.jsx';
+import Treatments from '../components/Treatments.jsx';
+import ClinicGallery from '../components/ClinicGallery.jsx';
 import Location from '../components/Location.jsx';
 import FinalCTA from '../components/FinalCTA.jsx';
 import Footer from '../components/Footer.jsx';
@@ -18,14 +19,15 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        {/* Autoridade e acolhimento antes da prova social. */}
-        <PainPoints />
-        <CasosReais />
-        <Treatments />
-        <Differentials />
-        <ClinicGallery />
-        <Process />
+        {/* Prova social logo apos o hero: depoimento em video e casos reais. */}
         <Testimonials />
+        <CasosReais />
+        <ParaQuem />
+        <Process />
+        <SobreDoutora />
+        <HomeFaq />
+        <Treatments />
+        <ClinicGallery />
         <Location />
         <FinalCTA />
       </main>

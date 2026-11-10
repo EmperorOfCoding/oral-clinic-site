@@ -15,7 +15,7 @@ export default function FinalCTA() {
         >
           {/* Imagem real da clinica como base, com veu escuro para leitura. */}
           <img
-            src="/images/foto_3_oral_clinic.png"
+            src="/images/home/atendimento-acolhimento.webp"
             alt=""
             aria-hidden="true"
             className="absolute inset-0 h-full w-full object-cover"

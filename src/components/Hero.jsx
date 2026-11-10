@@ -71,7 +71,7 @@ export default function Hero() {
           <div className="relative">
             <div className="relative overflow-hidden rounded-[1.75rem] bg-lavanda-200">
               <img
-                src="/images/foto_dona (2).png"
+                src="/images/home/dra-marcela-hero.webp"
                 alt={`${CLINIC.responsavelTecnica}, responsável técnica da Oral Clinic, na sala de atendimento da clínica`}
                 className="aspect-[4/5] w-full object-cover"
                 width="960"
